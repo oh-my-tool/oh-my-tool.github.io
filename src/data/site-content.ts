@@ -185,7 +185,7 @@ export const landingContent: Record<LocaleKey, LandingContent> = {
       items: [
         { name: 'MySQL', packageName: '@oh-my-tool/mysql', description: 'Query, inspect, and operate MySQL through native tools.', href: 'https://github.com/oh-my-tool/omt-mysql', accent: 'cyan' },
         { name: 'Redis', packageName: '@oh-my-tool/redis', description: 'Bring fast key-value workflows into the same runtime.', href: 'https://github.com/oh-my-tool/omt-redis', accent: 'violet' },
-        { name: 'Kafka', packageName: '@oh-my-tool/kafka', description: 'Discover and run event-streaming capabilities locally.', href: 'https://github.com/oh-my-tool/omt-kafka', accent: 'amber' },
+        { name: 'Kafka', packageName: '@oh-my-tool/kafka', description: 'Implemented and ready for event-streaming workflows locally.', href: 'https://github.com/oh-my-tool/omt-kafka', accent: 'amber' },
       ],
     },
     principles: {
@@ -206,7 +206,7 @@ export const landingContent: Record<LocaleKey, LandingContent> = {
       cta: 'Explore the roadmap',
       items: [
         { version: 'v0.2', status: 'Shipped', title: 'Provider-independent runtime', description: 'Runtime, registry, CLI, and native extension contract.' },
-        { version: 'v0.3', status: 'In progress', title: 'MCP provider integration', description: 'Connect MCP servers through the same discovery and execution flow.' },
+        { version: 'v0.3', status: 'Shipped', title: 'MCP provider integration', description: 'MCP servers now connect through the same discovery and execution flow.' },
         { version: 'v0.4', status: 'Planned', title: 'Governance foundation', description: 'Expand policy controls, auditability, and safe execution defaults.' },
       ],
     },
@@ -289,7 +289,7 @@ export const landingContent: Record<LocaleKey, LandingContent> = {
       items: [
         { name: 'MySQL', packageName: '@oh-my-tool/mysql', description: '通过原生工具查询、检查和操作 MySQL。', href: 'https://github.com/oh-my-tool/omt-mysql', accent: 'cyan' },
         { name: 'Redis', packageName: '@oh-my-tool/redis', description: '把高速 Key-Value 工作流接入同一运行时。', href: 'https://github.com/oh-my-tool/omt-redis', accent: 'violet' },
-        { name: 'Kafka', packageName: '@oh-my-tool/kafka', description: '在本地发现并执行事件流处理能力。', href: 'https://github.com/oh-my-tool/omt-kafka', accent: 'amber' },
+        { name: 'Kafka', packageName: '@oh-my-tool/kafka', description: '已实现，可在本地发现并执行事件流处理能力。', href: 'https://github.com/oh-my-tool/omt-kafka', accent: 'amber' },
       ],
     },
     principles: {
@@ -310,7 +310,7 @@ export const landingContent: Record<LocaleKey, LandingContent> = {
       cta: '查看路线图',
       items: [
         { version: 'v0.2', status: '已完成', title: 'Provider 无关运行时', description: '运行时、Registry、CLI 与原生扩展契约。' },
-        { version: 'v0.3', status: '进行中', title: 'MCP Provider 集成', description: '通过统一的发现与执行流程连接 MCP Server。' },
+        { version: 'v0.3', status: '已完成', title: 'MCP Provider 集成', description: 'MCP Server 已接入统一的发现与执行流程。' },
         { version: 'v0.4', status: '计划中', title: '治理基础', description: '扩展策略控制、审计能力与安全执行默认值。' },
       ],
     },

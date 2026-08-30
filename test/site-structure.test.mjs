@@ -36,7 +36,19 @@ function testUsesCurrentStarlightSocialConfigShape() {
   assert.match(config, /social:\s*\[/, 'Starlight social links must use an array');
 }
 
+function testReflectsCurrentProductStatusAndBrandMark() {
+  const header = readFileSync(resolve(root, 'src/components/site/SiteHeader.astro'), 'utf8');
+  const content = readFileSync(resolve(root, 'src/data/site-content.ts'), 'utf8');
+
+  assert.match(header, />OMT<|>OMT\s*</, 'the brand mark must use OMT');
+  assert.match(content, /version: 'v0\.3', status: 'Shipped'/, 'English v0.3 must be shipped');
+  assert.match(content, /version: 'v0\.3', status: '已完成'/, 'Chinese v0.3 must be completed');
+  assert.match(content, /Implemented and ready for event-streaming workflows locally/, 'Kafka must be marked implemented');
+  assert.match(content, /已实现，可在本地发现并执行事件流处理能力/, 'Kafka must be marked implemented in Chinese');
+}
+
 testPublishesBilingualEntryPoints();
 testDocumentsRuntimeProtocolAndDeployment();
 testUsesCurrentStarlightSocialConfigShape();
+testReflectsCurrentProductStatusAndBrandMark();
 console.log('site structure tests passed');
