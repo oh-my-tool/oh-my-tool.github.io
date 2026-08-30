@@ -43,13 +43,13 @@
 - Create `src/pages/zh/index.astro`: Chinese landing page.
 - Create `src/pages/roadmap.astro`: English roadmap page.
 - Create `src/pages/zh/roadmap.astro`: Chinese roadmap page.
-- Create `src/content/docs/en/index.md`: English docs landing.
-- Create `src/content/docs/en/getting-started/installation.md`: installation guide.
-- Create `src/content/docs/en/getting-started/first-run.md`: first `search → describe → run` flow.
-- Create `src/content/docs/en/concepts/runtime.md`: runtime concepts.
-- Create `src/content/docs/en/concepts/providers-and-extensions.md`: providers and extensions.
-- Create `src/content/docs/en/cli/reference.md`: command reference.
-- Create `src/content/docs/en/extensions/official.md`: official extension links.
+- Create `src/content/docs/index.md`: English docs landing in the root locale.
+- Create `src/content/docs/getting-started/installation.md`: installation guide.
+- Create `src/content/docs/getting-started/first-run.md`: first `search → describe → run` flow.
+- Create `src/content/docs/concepts/runtime.md`: runtime concepts.
+- Create `src/content/docs/concepts/providers-and-extensions.md`: providers and extensions.
+- Create `src/content/docs/cli/reference.md`: command reference.
+- Create `src/content/docs/extensions/official.md`: official extension links.
 - Create `src/content/docs/zh/index.md`: Chinese docs landing.
 - Create `src/content/docs/zh/getting-started/installation.md`: Chinese installation guide.
 - Create `src/content/docs/zh/getting-started/first-run.md`: Chinese first-run guide.
@@ -81,7 +81,7 @@
 
 - [ ] **Step 2: Configure site and locales**
 
-  Configure `site: "https://oh-my-tool.github.io"`, Starlight with `defaultLocale: "en"`, `prefixDefaultLocale: false`, and a `zh` locale. Set the Starlight title, description, social links, and sidebar groups for Getting Started, Concepts, CLI Reference, Providers/Extensions, and Roadmap.
+  Configure `site: "https://oh-my-tool.github.io"`, Starlight with a `root` locale for English and a `zh` locale for Simplified Chinese. Set the Starlight title, description, social links, and sidebar groups for Getting Started, Concepts, CLI Reference, Providers/Extensions, and Roadmap. Keep English content directly under `src/content/docs/` and Chinese content under `src/content/docs/zh/` so the public routes remain `/docs/` and `/zh/docs/`.
 
 - [ ] **Step 3: Add strict TypeScript and ignore rules**
 
@@ -205,13 +205,13 @@
 ### Task 5: Create bilingual Starlight documentation
 
 **Files:**
-- Create: `src/content/docs/en/index.md`
-- Create: `src/content/docs/en/getting-started/installation.md`
-- Create: `src/content/docs/en/getting-started/first-run.md`
-- Create: `src/content/docs/en/concepts/runtime.md`
-- Create: `src/content/docs/en/concepts/providers-and-extensions.md`
-- Create: `src/content/docs/en/cli/reference.md`
-- Create: `src/content/docs/en/extensions/official.md`
+- Create: `src/content/docs/index.md`
+- Create: `src/content/docs/getting-started/installation.md`
+- Create: `src/content/docs/getting-started/first-run.md`
+- Create: `src/content/docs/concepts/runtime.md`
+- Create: `src/content/docs/concepts/providers-and-extensions.md`
+- Create: `src/content/docs/cli/reference.md`
+- Create: `src/content/docs/extensions/official.md`
 - Create: `src/content/docs/zh/index.md`
 - Create: `src/content/docs/zh/getting-started/installation.md`
 - Create: `src/content/docs/zh/getting-started/first-run.md`
@@ -236,7 +236,7 @@
 
 - [ ] **Step 3: Write the Chinese equivalents**
 
-  Translate the user-facing explanation naturally, preserve commands/code blocks exactly, and ensure every English page has the corresponding Chinese page with matching frontmatter slugs where possible.
+  Translate the user-facing explanation naturally, preserve commands/code blocks exactly, and ensure every root-locale English page has the corresponding `zh/` page with matching frontmatter slugs where possible.
 
 - [ ] **Step 4: Add roadmap pages**
 
@@ -300,4 +300,3 @@
 - [ ] **Step 4: Review git status and hand off**
 
   Run `git status --short --branch` and report the local preview URL, build/check results, key routes, and any GitHub Pages configuration still required.
-
