@@ -8,6 +8,7 @@
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "npm run test:structure",
     "test:structure": "node test/site-structure.test.mjs"
   },
   "dependencies": {
