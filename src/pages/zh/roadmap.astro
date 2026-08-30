@@ -1,0 +1,37 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+import { landingContent } from '../../data/site-content';
+
+const content = landingContent.zh;
+---
+
+<LandingLayout content={content} title="路线图 — Oh My Tool">
+  <section class="hero roadmap-hero">
+    <div class="container">
+      <div class="eyebrow">{content.roadmap.eyebrow}</div>
+      <h1>一个持续<br /><span class="accent">向前的运行时。</span></h1>
+      <p class="hero-copy">{content.roadmap.description}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="roadmap-list">
+        {content.roadmap.items.map((item) => (
+          <article class="roadmap-row">
+            <div class="roadmap-version">{item.version}</div>
+            <div>
+              <div class="roadmap-title">{item.title}</div>
+              <span class="roadmap-status">{item.status}</span>
+            </div>
+            <div class="roadmap-desc">{item.description}</div>
+            <div class="roadmap-arrow" aria-hidden="true">↗</div>
+          </article>
+        ))}
+      </div>
+      <div class="roadmap-note">
+        <span class="section-kicker">范围说明</span>
+        <p>路线图会按能力切片逐步推进。工作流编排、Daemon、GUI、Marketplace、审批界面和公开 Runtime Package 仍属于未来工作，不会被描述为已交付能力。</p>
+      </div>
+    </div>
+  </section>
+</LandingLayout>

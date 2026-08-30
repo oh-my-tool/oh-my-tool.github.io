@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import SiteHeader from '../components/site/SiteHeader.astro';
+import SiteFooter from '../components/site/SiteFooter.astro';
+import type { LandingContent } from '../data/site-content';
+
+interface Props {
+  content: LandingContent;
+  title?: string;
+  description?: string;
+}
+
+const { content, title = 'Oh My Tool — The Agent Tool Runtime', description = content.hero.description } = Astro.props;
+---
+
+<!doctype html>
+<html lang={content.lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <SiteHeader content={content} />
+      <main><slot /></main>
+      <SiteFooter content={content} />
+    </div>
+  </body>
+</html>

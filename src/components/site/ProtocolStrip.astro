@@ -1,0 +1,28 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  steps: { label: string; description: string }[];
+}
+
+const { eyebrow, title, steps } = Astro.props;
+---
+
+<section class="section" id="protocol">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">{eyebrow}</div>
+        <h2>{title}</h2>
+      </div>
+    </div>
+    <div class="protocol-grid">
+      {steps.map((step) => (
+        <article class="protocol-step">
+          <h3>{step.label}</h3>
+          <p>{step.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+---
+import type { LandingContent } from '../../data/site-content';
+
+interface Props {
+  content: LandingContent;
+}
+
+const { content } = Astro.props;
+---
+
+<header class="site-header">
+  <a class="brand" href={content.locale === 'zh' ? '/zh/' : '/'} aria-label="Oh My Tool home">
+    <span class="brand-mark" aria-hidden="true">OM</span>
+    <span class="brand-name">Oh My Tool <span class="brand-meta">/ runtime</span></span>
+  </a>
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="nav-link" href={content.locale === 'zh' ? '/zh/docs/' : '/docs/'}>{content.nav.docs}</a>
+    <a class="nav-link" href={content.locale === 'zh' ? '/zh/roadmap/' : '/roadmap/'}>{content.nav.roadmap}</a>
+    <a class="nav-link nav-cta" href="https://github.com/oh-my-tool/oh-my-tool" target="_blank" rel="noreferrer">{content.nav.github} ↗</a>
+    <a class="nav-link locale-link" href={content.nav.languageHref} aria-label={`${content.nav.language}: ${content.nav.languageLabel}`}>
+      <span class="locale-dot" aria-hidden="true"></span>{content.nav.languageLabel}
+    </a>
+  </nav>
+</header>

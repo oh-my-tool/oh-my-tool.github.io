@@ -1,0 +1,36 @@
+---
+import type { Capability } from '../../data/site-content';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: Capability[];
+}
+
+const { eyebrow, title, description, items } = Astro.props;
+---
+
+<section class="section" id="capabilities">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">{eyebrow}</div>
+        <h2>{title}</h2>
+      </div>
+      <p>{description}</p>
+    </div>
+    <div class="capability-grid">
+      {items.map((item) => (
+        <article class="capability-card" style={`--accent: var(--accent-${item.accent})`}>
+          <div class="card-top">
+            <span class="card-index">{item.index}</span>
+            <span class="card-pulse" aria-hidden="true"></span>
+          </div>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+---
+import type { RoadmapItem } from '../../data/site-content';
+
+interface Props {
+  locale: 'en' | 'zh';
+  eyebrow: string;
+  title: string;
+  description: string;
+  cta: string;
+  items: RoadmapItem[];
+}
+
+const { locale, eyebrow, title, description, cta, items } = Astro.props;
+const roadmapHref = locale === 'zh' ? '/zh/roadmap/' : '/roadmap/';
+---
+
+<section class="section" id="roadmap">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">{eyebrow}</div>
+        <h2>{title}</h2>
+      </div>
+      <p>{description}</p>
+    </div>
+    <div class="roadmap-list">
+      {items.map((item) => (
+        <div class="roadmap-row">
+          <div class="roadmap-version">{item.version}</div>
+          <div>
+            <div class="roadmap-title">{item.title}</div>
+            <span class="roadmap-status">{item.status}</span>
+          </div>
+          <div class="roadmap-desc">{item.description}</div>
+          <div class="roadmap-arrow" aria-hidden="true">↗</div>
+        </div>
+      ))}
+    </div>
+    <a class="roadmap-cta" href={roadmapHref}>{cta}</a>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+import { landingContent } from '../data/site-content';
+
+const content = landingContent.en;
+---
+
+<LandingLayout content={content} title="Roadmap — Oh My Tool">
+  <section class="hero roadmap-hero">
+    <div class="container">
+      <div class="eyebrow">{content.roadmap.eyebrow}</div>
+      <h1>A runtime that<br /><span class="accent">keeps moving.</span></h1>
+      <p class="hero-copy">{content.roadmap.description}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="roadmap-list">
+        {content.roadmap.items.map((item) => (
+          <article class="roadmap-row">
+            <div class="roadmap-version">{item.version}</div>
+            <div>
+              <div class="roadmap-title">{item.title}</div>
+              <span class="roadmap-status">{item.status}</span>
+            </div>
+            <div class="roadmap-desc">{item.description}</div>
+            <div class="roadmap-arrow" aria-hidden="true">↗</div>
+          </article>
+        ))}
+      </div>
+      <div class="roadmap-note">
+        <span class="section-kicker">Scope note</span>
+        <p>The roadmap is intentionally incremental. Workflow orchestration, a daemon, GUI, marketplace, approval UI, and public runtime package remain future work rather than shipped promises.</p>
+      </div>
+    </div>
+  </section>
+</LandingLayout>

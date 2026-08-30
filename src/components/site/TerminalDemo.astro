@@ -1,0 +1,38 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  prompt: string;
+  lines: { command: string; output: string }[];
+}
+
+const { eyebrow, title, description, prompt, lines } = Astro.props;
+---
+
+<section class="section terminal-section" id="cli">
+  <div class="container terminal-layout">
+    <div class="section-heading">
+      <div class="section-kicker">{eyebrow}</div>
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </div>
+    <div class="terminal" aria-label="Example commands">
+      <div class="terminal-bar">
+        <span class="terminal-dot" style="--dot: #ff7f8d"></span>
+        <span class="terminal-dot" style="--dot: #ffc876"></span>
+        <span class="terminal-dot" style="--dot: #70e5e4"></span>
+        <span class="terminal-title">ohmytool / local runtime</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-prompt">{prompt}</div>
+        {lines.map((line) => (
+          <div class="terminal-line">
+            <div class="terminal-command">{line.command}</div>
+            <div class="terminal-output">{line.output}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

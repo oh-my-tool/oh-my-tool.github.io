@@ -43,20 +43,20 @@
 - Create `src/pages/zh/index.astro`: Chinese landing page.
 - Create `src/pages/roadmap.astro`: English roadmap page.
 - Create `src/pages/zh/roadmap.astro`: Chinese roadmap page.
-- Create `src/content/docs/index.md`: English docs landing in the root locale.
-- Create `src/content/docs/getting-started/installation.md`: installation guide.
-- Create `src/content/docs/getting-started/first-run.md`: first `search → describe → run` flow.
-- Create `src/content/docs/concepts/runtime.md`: runtime concepts.
-- Create `src/content/docs/concepts/providers-and-extensions.md`: providers and extensions.
-- Create `src/content/docs/cli/reference.md`: command reference.
-- Create `src/content/docs/extensions/official.md`: official extension links.
-- Create `src/content/docs/zh/index.md`: Chinese docs landing.
-- Create `src/content/docs/zh/getting-started/installation.md`: Chinese installation guide.
-- Create `src/content/docs/zh/getting-started/first-run.md`: Chinese first-run guide.
-- Create `src/content/docs/zh/concepts/runtime.md`: Chinese runtime concepts.
-- Create `src/content/docs/zh/concepts/providers-and-extensions.md`: Chinese provider/extension guide.
-- Create `src/content/docs/zh/cli/reference.md`: Chinese command reference.
-- Create `src/content/docs/zh/extensions/official.md`: Chinese official extension links.
+- Create `src/content/docs/docs/index.md`: English docs landing in the root locale, routed at `/docs/`.
+- Create `src/content/docs/docs/getting-started/installation.md`: installation guide.
+- Create `src/content/docs/docs/getting-started/first-run.md`: first `search → describe → run` flow.
+- Create `src/content/docs/docs/concepts/runtime.md`: runtime concepts.
+- Create `src/content/docs/docs/concepts/providers-and-extensions.md`: providers and extensions.
+- Create `src/content/docs/docs/cli/reference.md`: command reference.
+- Create `src/content/docs/docs/extensions/official.md`: official extension links.
+- Create `src/content/docs/zh/docs/index.md`: Chinese docs landing routed at `/zh/docs/`.
+- Create `src/content/docs/zh/docs/getting-started/installation.md`: Chinese installation guide.
+- Create `src/content/docs/zh/docs/getting-started/first-run.md`: Chinese first-run guide.
+- Create `src/content/docs/zh/docs/concepts/runtime.md`: Chinese runtime concepts.
+- Create `src/content/docs/zh/docs/concepts/providers-and-extensions.md`: Chinese provider/extension guide.
+- Create `src/content/docs/zh/docs/cli/reference.md`: Chinese command reference.
+- Create `src/content/docs/zh/docs/extensions/official.md`: Chinese official extension links.
 - Create `public/favicon.svg`: simple OMT mark without external assets.
 - Create `.github/workflows/deploy.yml`: GitHub Pages build and deployment workflow.
 - Create `.gitignore`: dependency, build, editor, and OS ignores.
@@ -205,13 +205,13 @@
 ### Task 5: Create bilingual Starlight documentation
 
 **Files:**
-- Create: `src/content/docs/index.md`
-- Create: `src/content/docs/getting-started/installation.md`
-- Create: `src/content/docs/getting-started/first-run.md`
-- Create: `src/content/docs/concepts/runtime.md`
-- Create: `src/content/docs/concepts/providers-and-extensions.md`
-- Create: `src/content/docs/cli/reference.md`
-- Create: `src/content/docs/extensions/official.md`
+- Create: `src/content/docs/docs/index.md`
+- Create: `src/content/docs/docs/getting-started/installation.md`
+- Create: `src/content/docs/docs/getting-started/first-run.md`
+- Create: `src/content/docs/docs/concepts/runtime.md`
+- Create: `src/content/docs/docs/concepts/providers-and-extensions.md`
+- Create: `src/content/docs/docs/cli/reference.md`
+- Create: `src/content/docs/docs/extensions/official.md`
 - Create: `src/content/docs/zh/index.md`
 - Create: `src/content/docs/zh/getting-started/installation.md`
 - Create: `src/content/docs/zh/getting-started/first-run.md`

@@ -1,0 +1,35 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  nodes: string[];
+}
+
+const { eyebrow, title, description, nodes } = Astro.props;
+---
+
+<section class="section" id="architecture">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <div class="section-kicker">{eyebrow}</div>
+        <h2>{title}</h2>
+      </div>
+      <p>{description}</p>
+    </div>
+    <div class="architecture-card" aria-label="Oh My Tool runtime architecture">
+      <div class="architecture-flow">
+        {nodes.map((node, index) => (
+          <>
+            <div class="architecture-node">
+              <span class="node-index">0{index + 1}</span>
+              <span class="node-label">{node}</span>
+            </div>
+            {index < nodes.length - 1 && <span class="node-connector" aria-hidden="true">→</span>}
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

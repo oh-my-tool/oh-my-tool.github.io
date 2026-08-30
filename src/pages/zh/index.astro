@@ -1,0 +1,46 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+import ArchitectureFlow from '../../components/site/ArchitectureFlow.astro';
+import ProtocolStrip from '../../components/site/ProtocolStrip.astro';
+import CapabilityGrid from '../../components/site/CapabilityGrid.astro';
+import TerminalDemo from '../../components/site/TerminalDemo.astro';
+import ExtensionGrid from '../../components/site/ExtensionGrid.astro';
+import PrinciplesSection from '../../components/site/PrinciplesSection.astro';
+import RoadmapPreview from '../../components/site/RoadmapPreview.astro';
+import { landingContent } from '../../data/site-content';
+
+const content = landingContent.zh;
+---
+
+<LandingLayout content={content} title="Oh My Tool — 面向 AI Agent 的工具运行时">
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">{content.hero.eyebrow}</div>
+      <h1>一个运行时。<br /><span class="accent">每一种工具。</span></h1>
+      <p class="hero-copy">{content.hero.description}</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={content.hero.primaryHref}>{content.hero.primaryCta} <span aria-hidden="true">↗</span></a>
+        <a class="button button-secondary" href={content.hero.secondaryHref} target="_blank" rel="noreferrer">{content.hero.secondaryCta} <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="install-chip">
+        <strong>{content.hero.installLabel}</strong>
+        <code>{content.hero.installCommand}</code>
+      </div>
+    </div>
+  </section>
+
+  <ArchitectureFlow {...content.architecture} />
+  <ProtocolStrip {...content.protocol} />
+  <CapabilityGrid {...content.capabilities} />
+  <TerminalDemo {...content.terminal} />
+  <ExtensionGrid {...content.extensions} />
+  <PrinciplesSection {...content.principles} />
+  <RoadmapPreview locale={content.locale} {...content.roadmap} />
+
+  <section class="final-cta container" id="get-started">
+    <div class="eyebrow">{content.finalCta.eyebrow}</div>
+    <h2>{content.finalCta.title}</h2>
+    <p>{content.finalCta.description}</p>
+    <a class="button button-primary" href={content.hero.primaryHref}>{content.finalCta.cta} <span aria-hidden="true">↗</span></a>
+  </section>
+</LandingLayout>

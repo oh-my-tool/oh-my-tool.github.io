@@ -1,0 +1,20 @@
+:root {
+  --sl-color-accent-low: #18234a;
+  --sl-color-accent: #70e5e4;
+  --sl-color-accent-high: #c7ffff;
+  --sl-color-white: #f6f8ff;
+  --sl-color-gray-1: #dce4f5;
+  --sl-color-gray-2: #aebbd4;
+  --sl-color-gray-3: #7c8ba8;
+  --sl-color-gray-4: #53627f;
+  --sl-color-gray-5: #26324c;
+  --sl-color-gray-6: #11182b;
+  --sl-color-black: #070a12;
+}
+
+html { background: #070a12; }
+.sidebar-pane, header.header { background: rgba(7, 10, 18, .92); }
+header.header { border-bottom-color: rgba(162, 177, 214, .18); }
+.sidebar-content { border-inline-end-color: rgba(162, 177, 214, .18); }
+:is(a, button):focus-visible { outline-color: #70e5e4; }
+code { font-family: 'DM Mono', 'Cascadia Code', monospace; }

@@ -1,0 +1,23 @@
+---
+import type { LandingContent } from '../../data/site-content';
+
+interface Props {
+  content: LandingContent;
+}
+
+const { content } = Astro.props;
+const prefix = content.locale === 'zh' ? '/zh' : '';
+---
+
+<footer class="site-footer container">
+  <div>
+    <div class="footer-brand">Oh My Tool</div>
+    <div class="footer-tagline">{content.footer.tagline}</div>
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="https://github.com/oh-my-tool/oh-my-tool" target="_blank" rel="noreferrer">{content.footer.source}</a>
+    <a href={`${prefix}/docs/`}>{content.footer.docs}</a>
+    <a href={`${prefix}/docs/extensions/official/`}>{content.footer.extensions}</a>
+    <a href="https://github.com/oh-my-tool" target="_blank" rel="noreferrer">GitHub Org ↗</a>
+  </nav>
+</footer>
